@@ -3,6 +3,6 @@ backups/*
 *elc
 places
 .DS_Store
-
+.saves*
 /#topfunky.el#
 /url/cookies
