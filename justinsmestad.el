@@ -20,6 +20,14 @@
             (expand-file-name
              (concat "#%" (buffer-name) "#")))))
 
+;; nxHTML
+;; MuMaMo-Mode for rhtml files
+(load "vendor/nxhtml/autostart.el")
+(require 'mumamo-fun)
+(setq mumamo-chunk-coloring 'submode-colored)
+(add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-html-mumamo))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
+
 ;; Put backup files (ie foo~) in one place too. (The backup-directory-alist
 ;; list contains regexp=>directory mappings; filenames matching a regexp are
 ;; backed up in the corresponding directory. Emacs will mkdir it if necessary.)
@@ -40,6 +48,16 @@
 (setq clojure-src-root "/Users/topfunky/tmp/clojure")
 (eval-after-load 'clojure-mode '(clojure-slime-config))
 
+;; Sinatra
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/sinatra"))
+(require 'sinatra)
+
+;; RSpec
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec"))
+(require 'rspec-mode)
+
+;; Cucumber
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/cucumber"))
 
 ;; Minor Modes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
