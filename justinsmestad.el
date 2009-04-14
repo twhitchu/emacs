@@ -79,6 +79,18 @@
 (define-key rinari-minor-mode-map [(control meta shift up)] 'rinari-find-model)
 (define-key rinari-minor-mode-map [(control meta shift right)] 'rinari-find-view)
 
+
+(require 'ruby-mode)
+(defun my-ruby-mode-hook ()
+  (font-lock-mode t)
+  (setq standard-indent 2)
+  (pabbrev-mode t)
+  (ruby-electric-mode t)
+  (define-key ruby-mode-map "\C-c\C-a" 'ruby-eval-buffer))
+  
+(add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
+
+
 (autoload 'applescript-mode "applescript-mode" "major mode for editing AppleScript source." t)
 (setq auto-mode-alist
       (cons '("\\.applescript$" . applescript-mode) auto-mode-alist))

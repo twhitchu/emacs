@@ -21,6 +21,6 @@
    (font-lock-type-face ((t (:foreground "white"))))
    (font-lock-variable-name-face ((t (:foreground "white"))))
    (font-lock-warning-face ((t (:foreground "red")))) ; TODO
-   (highlight ((t (:background "red")))) ; TODO
+   (highlight ((t (:background "#2F2F2F")))) ; TODO
    (italic ((t (:italic t))))
    (underline ((t (:underline t)))))))
