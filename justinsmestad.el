@@ -59,6 +59,9 @@
 ;; Cucumber
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/cucumber"))
 
+;; Magit
+(require 'magit)
+
 ;; Minor Modes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
 (require 'textmate)
@@ -69,6 +72,9 @@
 
 ;; Javascript
 ;; TODO javascript-indent-level 2
+
+;; Pabbrev
+(require 'pabbrev)
 
 ;; Rinari
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/jump.el"))
