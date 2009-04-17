@@ -196,6 +196,12 @@ ruby-mode-map
             (= (point) (match-end 0))) ;looking-back is missing on XEmacs
        (save-excursion
          (insert "|"))))
- 
+
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
  
 (provide 'ruby-electric)
